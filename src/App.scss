@@ -1,0 +1,19 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.header-wrapper {
+  z-index: 11111;
+  grid-area: 1 / 1 / 2 / 6;
+}
+.sidebar-wrapper {
+  grid-area: 2 / 1 / 6 / 2;
+}
+.notes-wrapper {
+  padding: 20px;
+  grid-area: 2 / 2 / 6 / 6;
+}
