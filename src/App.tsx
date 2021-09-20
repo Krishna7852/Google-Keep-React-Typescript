@@ -11,6 +11,7 @@ import { DashboardContextProvider } from './context/DashboardContext';
 import Archive from './pages/archive/archive';
 import Dashboard from './pages/dashboard/dashboard';
 import Reminders from './pages/reminders/reminders';
+import Trash from './pages/trash/trash';
 
 function App() {
   return (
@@ -33,18 +34,10 @@ function App() {
                     return <Redirect to='/notes' />;
                   }}
                 />
-                <Route exact path='/notes'>
-                  <Dashboard />
-                </Route>
-                <Route path='/reminders'>
-                  <Reminders />
-                </Route>
-                <Route path='/archive'>
-                  <Archive />
-                </Route>
-                <Route path='/trash'>
-                  <Archive />
-                </Route>
+                <Route exact path='/notes' component={Dashboard} />
+                <Route path='/reminders' component={Reminders} />
+                <Route path='/archive' component={Archive} />
+                <Route path='/trash' component={Trash} />
               </Switch>
             </div>
           </div>
